@@ -18,6 +18,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, PersonalityType::class.java)
             startActivity(intent)
         }
+        val btn2 = findViewById<Button>(R.id.button2)
+        btn2.setOnClickListener {
+            val intent = Intent(this, ChangeColor::class.java)
+            startActivity(intent)
+        }
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)

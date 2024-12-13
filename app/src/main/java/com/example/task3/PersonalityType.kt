@@ -30,6 +30,7 @@ class PersonalityType : AppCompatActivity() {
         }
 
     }
+    //TODO:
     private fun getDescriptionByPosition(position: Int): String {
         val description = resources.getStringArray(R.array.description_types)
         return description[position];

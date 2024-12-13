@@ -3,4 +3,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="my_blue">#507FA4</color>
+    <!--TODO: Get set colors-->
+    <color-array name="bgColors">
+        <color name="purple">#6750a4</color>
+    </color-array>
 </resources>
