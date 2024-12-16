@@ -27,6 +27,7 @@ class ChangeColor : AppCompatActivity() {
             val textColorPosition = spinnerTextColors.selectedItemPosition
 
 
+
             val backgroundColor = when (backgroundColorPosition) {
                 0 -> rgb(255,95,95)
                 1 -> rgb(148, 255, 95)
