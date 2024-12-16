@@ -1,6 +1,7 @@
 package com.example.task3
 
-import android.icu.text.Transliterator.Position
+import android.graphics.Color
+import android.graphics.Color.rgb
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Spinner
@@ -20,24 +21,23 @@ class ChangeColor : AppCompatActivity() {
         val button = findViewById<Button>(R.id.btnSetColors)
 
 
+
         button.setOnClickListener {
             val backgroundColorPosition = spinnerColors.selectedItemPosition
             val textColorPosition = spinnerTextColors.selectedItemPosition
 
+
             val backgroundColor = when (backgroundColorPosition) {
-                0 -> Color.RED
-                1 -> Color.BLUE
-                2 -> Color.GREEN
-                3 -> Color.YELLOW
+                0 -> rgb(255,95,95)
+                1 -> rgb(148, 255, 95)
+                else -> Color.MAGENTA
+            }
+            val textColor = when (textColorPosition) {
+                0 -> Color.BLACK
+                1 -> rgb(5, 0, 250)
                 else -> Color.MAGENTA
             }
 
-            val textColor = when (textColorPosition) {
-                0 -> Color.WHITE
-                1 -> Color.BLACK
-                2 -> Color.GRAY
-                else -> Color.BLACK
-            }
 
             button.setBackgroundColor(backgroundColor)
             button.setTextColor(textColor)
@@ -47,10 +47,5 @@ class ChangeColor : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-    }
-    //TODO: Get colors
-    private fun getColorByPosition(position: Int): Int {
-        val color = resources.getColor(R.array.bgColors)
-        return color[position];
     }
 }

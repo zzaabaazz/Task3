@@ -17,7 +17,7 @@ class PersonalityType : AppCompatActivity() {
 
         val spinnerType=findViewById<Spinner> (R.id.spinnerPersons)
         val textViewDescription=findViewById<TextView> (R.id.textViewFind)
-        val button= findViewById<Button> (R.id.btnFindType)
+        val button=findViewById<Button> (R.id.btnFindType)
         button.setOnClickListener {
             val position = spinnerType.selectedItemPosition
             val description: String = getDescriptionByPosition(position)
@@ -33,7 +33,7 @@ class PersonalityType : AppCompatActivity() {
     //TODO:
     private fun getDescriptionByPosition(position: Int): String {
         val description = resources.getStringArray(R.array.description_types)
-        return description[position];
+        return description[position]
     }
 }
 
